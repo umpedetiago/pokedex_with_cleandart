@@ -1,6 +1,7 @@
-import 'package:poke_dex/domain/entities/pokemon_entity.dart';
-import 'package:poke_dex/domain/repositories/pokemon_repository.dart';
 import 'package:result_dart/result_dart.dart';
+
+import '../entities/pokemon_entity.dart';
+import '../repositories/pokemon_repository.dart';
 
 abstract class PokemonUsecase {
   Future<Result<List<PokemonEntity>, Exception>> call();

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:poke_dex/domain/entities/pokemon_details_entity.dart';
+import 'package:poke_dex/app/domain/entities/pokemon_details_entity.dart';
 
 void main() {
   test('pokemon details entity ...', () {

@@ -1,4 +1,4 @@
-import 'package:poke_dex/domain/entities/pokemon_details_entity.dart';
+import '../../domain/entities/pokemon_details_entity.dart';
 
 class PokemonDetailsAdapter {
   static PokemonDetailsEntity fromMap(Map<String, dynamic> data) {

@@ -1,8 +1,9 @@
-import 'package:poke_dex/domain/entities/pokemon_entity.dart';
-import 'package:poke_dex/domain/repositories/pokemon_repository.dart';
-import 'package:poke_dex/infra/adapters/pokemon_adapter.dart';
-import 'package:poke_dex/infra/datasource/pokemon_datasouce.dart';
 import 'package:result_dart/result_dart.dart';
+
+import '../../domain/entities/pokemon_entity.dart';
+import '../../domain/repositories/pokemon_repository.dart';
+import '../adapters/pokemon_adapter.dart';
+import '../datasource/pokemon_datasouce.dart';
 
 class PokemonRepositoryImpl implements PokemonRepository {
   final PokemonDatasource pokemonDatasource;

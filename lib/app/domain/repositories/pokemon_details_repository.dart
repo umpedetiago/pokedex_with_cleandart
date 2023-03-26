@@ -4,7 +4,7 @@ import '../entities/pokemon_details_entity.dart';
 import '../entities/pokemon_entity.dart';
 
 abstract class PokemonDetailsRepository {
-  Future<Result<List<PokemonDetailsEntity>, Exception>> fetchDetails({
+  Future<Result<PokemonDetailsEntity, Exception>> fetchDetails({
     required PokemonEntity pokemonEntity,
   });
 }

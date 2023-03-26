@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:poke_dex/external/datasource/pokemon_datasource.dart';
+import 'package:poke_dex/app/external/datasource/pokemon_datasource.dart';
 
 class DioMock extends Mock implements Dio {}
 

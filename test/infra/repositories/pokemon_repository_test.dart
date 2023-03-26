@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:poke_dex/domain/entities/pokemon_entity.dart';
-import 'package:poke_dex/infra/datasource/pokemon_datasouce.dart';
-import 'package:poke_dex/infra/repositories/pokemon_repository.dart';
+import 'package:poke_dex/app/domain/entities/pokemon_entity.dart';
+import 'package:poke_dex/app/infra/datasource/pokemon_datasouce.dart';
+import 'package:poke_dex/app/infra/repositories/pokemon_repository.dart';
 
 class PokemonDatasouceMock extends Mock implements PokemonDatasource {}
 

@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:poke_dex/infra/datasource/pokemon_datasouce.dart';
-import 'package:poke_dex/utils/base_url.dart';
+
+import '../../infra/datasource/pokemon_datasouce.dart';
+import '../../utils/base_url.dart';
 
 class PokemonDatasourceImpl implements PokemonDatasource {
   final Dio dio;
@@ -9,10 +10,10 @@ class PokemonDatasourceImpl implements PokemonDatasource {
   @override
   Future<List<Map<String, dynamic>>> getAllPokemons() async {
     final response = await dio.get(BaseUrl.ALL_POKEMONS);
-    if (response.statusCode == 200) {
-      return response.data;
-    } else {
+    if (response.statusCode != 200) {
       throw Exception('Erro na requisição');
+    } else {
+      return response.data;
     }
   }
 }
