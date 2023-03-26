@@ -2,19 +2,19 @@
 
 class PokemonEntity {
   final String name;
-  final String urlImage;
+  final String urlDetails;
   PokemonEntity({
     required this.name,
-    required this.urlImage,
+    required this.urlDetails,
   });
 
   @override
   bool operator ==(covariant PokemonEntity other) {
     if (identical(this, other)) return true;
 
-    return other.name == name && other.urlImage == urlImage;
+    return other.name == name && other.urlDetails == urlDetails;
   }
 
   @override
-  int get hashCode => name.hashCode ^ urlImage.hashCode;
+  int get hashCode => name.hashCode ^ urlDetails.hashCode;
 }

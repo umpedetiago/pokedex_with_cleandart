@@ -13,7 +13,6 @@ class PokemonUsecaseImpl implements PokemonUsecase {
   );
   @override
   Future<Result<List<PokemonEntity>, Exception>> call() async {
-    final response = await pokemonRepository.fetchPokemons();
-    return response;
+    return pokemonRepository.fetchPokemons();
   }
 }
