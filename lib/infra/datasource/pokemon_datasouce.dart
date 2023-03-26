@@ -1,3 +1,3 @@
-abstract class PokemonDatasouce {
+abstract class PokemonDatasource {
   Future<List<Map<String, dynamic>>> getAllPokemons();
 }

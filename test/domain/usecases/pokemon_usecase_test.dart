@@ -12,7 +12,7 @@ void main() {
   final usecase = PokemonUsecaseImpl(repository);
 
   test('Should be a list of Pokemon', () async {
-    when(() => repository.fetchPokemons())
+    when(repository.fetchPokemons)
         .thenAnswer((_) async => const Success(<PokemonEntity>[]));
     final result = await usecase();
     expect(result.getOrNull(), isA<List<PokemonEntity>>());

@@ -5,14 +5,14 @@ import 'package:poke_dex/infra/datasource/pokemon_datasouce.dart';
 import 'package:result_dart/result_dart.dart';
 
 class PokemonRepositoryImpl implements PokemonRepository {
-  final PokemonDatasouce pokemonDatasouce;
+  final PokemonDatasource pokemonDatasource;
 
-  PokemonRepositoryImpl(this.pokemonDatasouce);
+  PokemonRepositoryImpl(this.pokemonDatasource);
   @override
   Future<Result<List<PokemonEntity>, Exception>> fetchPokemons() async {
     try {
-      final response = await pokemonDatasouce.getAllPokemons();
-      final result = response.map((e) => PokemonAdapter.fromMap(e)).toList();
+      final response = await pokemonDatasource.getAllPokemons();
+      final result = response.map(PokemonAdapter.fromMap).toList();
       return Result.success(result);
     } on Exception catch (e) {
       return Result.failure(e);
