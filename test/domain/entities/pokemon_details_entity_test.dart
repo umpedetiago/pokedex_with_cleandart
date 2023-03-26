@@ -4,8 +4,8 @@ import 'package:poke_dex/app/domain/entities/pokemon_details_entity.dart';
 void main() {
   test('pokemon details entity ...', () {
     expect(
-      PokemonDetailsEntity(name: '', skill: '', urlImage: '', type: ''),
-      PokemonDetailsEntity(
+      const PokemonDetailsEntity(name: '', skill: '', urlImage: '', type: ''),
+      const PokemonDetailsEntity(
         name: '',
         skill: '',
         type: '',
@@ -16,9 +16,9 @@ void main() {
 
   test('pokemon details entity hashcode', () {
     expect(
-      PokemonDetailsEntity(name: '', skill: '', urlImage: '', type: '')
+      const PokemonDetailsEntity(name: '', skill: '', urlImage: '', type: '')
           .hashCode,
-      PokemonDetailsEntity(name: '', skill: '', type: '', urlImage: '')
+      const PokemonDetailsEntity(name: '', skill: '', type: '', urlImage: '')
           .hashCode,
     );
   });
