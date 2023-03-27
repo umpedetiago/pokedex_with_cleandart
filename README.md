@@ -22,4 +22,5 @@ As dependências utilizadas neste projeto são:
 Contribuições são sempre bem-vindas! Se você quiser contribuir para este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 ## Projeto
+Para esse projeto foram usados alguns principios de programação, como inversão e controler e outros principios do [S.O.L.I.D.](https://en.wikipedia.org/wiki/SOLID), Foram usados tambem os pluglins [Flutter Coverage](https://github.com/Flutterando/flutter-coverage) e [Coverage Gutters](https://github.com/ryanluker/vscode-coverage-gutters) para monitoramento da cobertura dos teste de unidade
 - [Repositorio do Github](https://github.com/umpedetiago/poke_dex)
