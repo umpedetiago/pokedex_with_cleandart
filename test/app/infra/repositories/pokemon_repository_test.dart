@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:poke_dex/app/domain/entities/pokemon_entity.dart';
+import 'package:poke_dex/app/domain/error/errors.dart';
 import 'package:poke_dex/app/infra/datasource/pokemon_datasouce.dart';
 import 'package:poke_dex/app/infra/repositories/pokemon_repository.dart';
 
@@ -17,8 +18,9 @@ void main() {
   });
 
   test('pokemon repository Exception', () async {
-    when(pokemonDatasource.getAllPokemons).thenThrow(Exception());
+    when(pokemonDatasource.getAllPokemons)
+        .thenThrow(FailurePokemon(menssage: ''));
     final response = await repository.fetchPokemons();
-    expect(response.exceptionOrNull(), isA<Exception>());
+    expect(response.exceptionOrNull(), isA<FailurePokemon>());
   });
 }

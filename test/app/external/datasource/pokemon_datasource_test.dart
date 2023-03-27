@@ -18,8 +18,8 @@ void main() {
         data: <Map<String, dynamic>>[],
       ),
     );
-    final future = datasource.getAllPokemons();
-    expect(future, completes);
+    final future = await datasource.getAllPokemons();
+    expect(future, isA<List<Map<String, dynamic>>>());
   });
   test('pokemon datasource Exception', () {
     when(

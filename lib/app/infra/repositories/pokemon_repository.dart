@@ -1,3 +1,5 @@
+import 'package:poke_dex/app/domain/error/errors.dart';
+
 import 'package:result_dart/result_dart.dart';
 
 import '../../domain/entities/pokemon_entity.dart';
@@ -10,12 +12,13 @@ class PokemonRepositoryImpl implements PokemonRepository {
 
   PokemonRepositoryImpl(this.pokemonDatasource);
   @override
-  Future<Result<List<PokemonEntity>, Exception>> fetchPokemons() async {
+  Future<Result<List<PokemonEntity>, FailurePokemon>> fetchPokemons() async {
     try {
       final response = await pokemonDatasource.getAllPokemons();
+
       final result = response.map(PokemonAdapter.fromMap).toList();
       return Result.success(result);
-    } on Exception catch (e) {
+    } on FailurePokemon catch (e) {
       return Result.failure(e);
     }
   }

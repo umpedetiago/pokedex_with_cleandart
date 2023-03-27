@@ -6,6 +6,8 @@ import 'package:poke_dex/app/external/datasource/pokemon_datasource.dart';
 import 'package:poke_dex/app/external/datasource/pokemon_details_datasource.dart';
 import 'package:poke_dex/app/infra/repositories/pokemon_details_repository.dart';
 import 'package:poke_dex/app/infra/repositories/pokemon_repository.dart';
+import 'package:poke_dex/app/presenter/blocs/pokemon_bloc.dart';
+import 'package:poke_dex/app/presenter/pages/details_page.dart';
 import 'package:poke_dex/app/presenter/pages/home_page.dart';
 
 class AppModule extends Module {
@@ -18,10 +20,18 @@ class AppModule extends Module {
         Bind((i) => PokemonDatasourceImpl(i())),
         Bind((i) => PokemonRepositoryImpl(i())),
         Bind((i) => PokemonUsecaseImpl(i())),
+        Bind((i) => PokemonBloc(i(), i()))
       ];
 
   @override
   List<ModularRoute> get routes => [
         ChildRoute('/', child: (context, args) => const HomePage()),
+        ChildRoute(
+          '/details',
+          // ignore: unnecessary_parenthesis
+          child: ((context, args) => DetailsPage(
+                pokemonDetail: args.data,
+              )),
+        )
       ];
 }

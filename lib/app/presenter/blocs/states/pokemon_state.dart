@@ -16,3 +16,7 @@ class PokemonInitialState extends PokemonState {
 class PokemonSuccessState extends PokemonState {
   PokemonSuccessState({required super.pokemonDetails});
 }
+
+class PokemonErrorState extends PokemonState {
+  PokemonErrorState({required super.pokemonDetails});
+}
