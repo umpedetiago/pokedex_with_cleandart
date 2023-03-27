@@ -1,6 +1,6 @@
 # poke_dex
 
-A new Flutter project.
+A flutter project using the clean dart architecture proposal and the bloc pattern to manage state.
 
 ## Getting Started
 
