@@ -46,7 +46,8 @@ class DetailsPage extends StatelessWidget {
             top: 80,
             left: 80,
             child: Text(
-              pokemonDetail.name,
+              pokemonDetail.name[0].toUpperCase() +
+                  pokemonDetail.name.substring(1),
               style: const TextStyle(
                 color: Colors.white,
                 fontSize: 30,

@@ -18,7 +18,7 @@ class StatsBar extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(currentValue.toString()),
+          SizedBox(width: 32, child: Text(currentValue.toString())),
           const SizedBox(
             width: 16,
           ),
