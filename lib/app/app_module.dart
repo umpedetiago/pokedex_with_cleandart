@@ -30,7 +30,8 @@ class AppModule extends Module {
           '/details',
           // ignore: unnecessary_parenthesis
           child: ((context, args) => DetailsPage(
-                pokemonDetail: args.data,
+                pokemonDetail: args.data['pokemonDetail'],
+                index: args.data['index'],
               )),
         )
       ];

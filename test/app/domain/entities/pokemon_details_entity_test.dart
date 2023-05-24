@@ -11,12 +11,18 @@ void main() {
         abilities: <PokemonAbilityEntity>[],
         urlImage: '',
         type: <PokemomTypeEntity>[],
+        height: 0,
+        weight: 0,
+        stats: [],
       ),
       const PokemonDetailsEntity(
         name: '',
         abilities: <PokemonAbilityEntity>[],
         type: <PokemomTypeEntity>[],
         urlImage: '',
+        height: 0,
+        weight: 0,
+        stats: [],
       ),
     );
   });
@@ -27,13 +33,19 @@ void main() {
         name: '',
         abilities: <PokemonAbilityEntity>[],
         urlImage: '',
+        height: 0,
+        weight: 0,
         type: <PokemomTypeEntity>[],
+        stats: [],
       ).hashCode,
       const PokemonDetailsEntity(
         name: '',
         abilities: <PokemonAbilityEntity>[],
         type: <PokemomTypeEntity>[],
         urlImage: '',
+        height: 0,
+        weight: 0,
+        stats: [],
       ).hashCode,
     );
   });

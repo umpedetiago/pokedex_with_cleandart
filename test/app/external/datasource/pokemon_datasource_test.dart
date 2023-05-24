@@ -15,7 +15,7 @@ void main() {
       (_) async => Response(
         requestOptions: RequestOptions(),
         statusCode: 200,
-        data: <Map<String, dynamic>>[],
+        data: {'results': []},
       ),
     );
     final future = await datasource.getAllPokemons();

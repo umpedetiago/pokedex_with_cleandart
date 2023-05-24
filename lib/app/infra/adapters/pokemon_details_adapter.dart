@@ -1,4 +1,5 @@
 import 'package:poke_dex/app/infra/adapters/pokemon_ability_adapter.dart';
+import 'package:poke_dex/app/infra/adapters/pokemon_stats_adapter.dart';
 import 'package:poke_dex/app/infra/adapters/pokemon_type_adapter.dart';
 
 import '../../domain/entities/pokemon_details_entity.dart';
@@ -12,6 +13,9 @@ class PokemonDetailsAdapter {
           .map(PokemonAbilityAdapter.fromMap)
           .toList(),
       urlImage: data['sprites']['front_default'],
+      height: data['height'] / 10.0,
+      weight: data['weight'] / 10.0,
+      stats: (data['stats'] as List).map(PokemonStatsAdapter.fromMap).toList(),
     );
   }
 }

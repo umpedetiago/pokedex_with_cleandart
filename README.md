@@ -17,6 +17,7 @@ As dependências utilizadas neste projeto são:
 - [flutter_bloc](https://pub.dev/packages/flutter_bloc) gerenciamento do estado
 - [flutter_modular](https://pub.dev/packages/flutter_modular) injeção de dependencias e rotas nomeadas
 - [equatable](https://pub.dev/packages/equatable) auxiliar nos testes de entidades
+- [line_icons](https://pub.dev/packages/line_icons) usar os icones que não são nativos
 
 ## Contribuições
 Contribuições são sempre bem-vindas! Se você quiser contribuir para este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
